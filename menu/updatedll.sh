@@ -2,7 +2,7 @@
 # ==========================================
 cd
 rm -r updatedll
-wget -O updatedll "https://raw.githubusercontent.com/arismuslimin/xraymulti/main/menu/updatedll.sh"
+wget -O updatedll "https://raw.githubusercontent.com/akcelluler/xraymulti/main/menu/updatedll.sh"
 rm -rf updatedll
 
 # hapus
@@ -26,7 +26,7 @@ akcell="raw.githubusercontent.com/akcelluler/xraymulti/main/menu"
 # download
 cd /usr/bin
 wget -O updatedll "https://${akcell}/updatedll.sh"
-wget -O xmenu "https://${akcell}/xmenu.sh"
+wget -O menu "https://${akcell}/menu.sh"
 wget -O set-br "https://${akcell}/set-br.sh"
 wget -O menu-buat "https://${akcell}/menu-buat.sh"
 wget -O add-akun "https://${akcell}/buat/add-akun.sh"
@@ -72,7 +72,7 @@ wget -O auto-pointing "https://${akcell}/domain/auto-pointing.sh"
 
 # permision
 chmod +x /usr/bin/updatedll
-chmod +x /usr/bin/xmenu
+chmod +x /usr/bin/menu
 chmod +x updatedll
 chmod +x menu
 chmod +x set-br

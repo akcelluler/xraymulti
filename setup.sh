@@ -35,7 +35,7 @@ wget https://raw.githubusercontent.com/akcelluler/xraymulti/main/menu/updatedll.
 #istall set br
 wget https://raw.githubusercontent.com/akcelluler/xraymulti/main/menu/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 #install certificate
-wget https://raw.githubusercontent.com/akcelluler/xraymulti/main/menu/cert.sh && chmod +x cert.sh && ./cert.sh
+wget https://raw.githubusercontent.com/akcelluler/xraymulti/main/menu/fix/cert.sh && chmod +x cert.sh && ./cert.sh
 #SELESAI
 echo " "
 echo "Installation has been completed!!"echo " "

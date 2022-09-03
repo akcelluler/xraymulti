@@ -327,6 +327,13 @@ cat > /etc/xray/config.json << END
   }
 }
 END
+#installdatausermultiakun
+cat > /etc/xray/configmultiakun.json << END
+      {
+#multiakun
+}
+END
+
 rm -rf /etc/systemd/system/xray.service.d
 cat <<EOF> /etc/systemd/system/xray.service
 Description=Xray Service

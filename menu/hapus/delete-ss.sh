@@ -52,7 +52,8 @@ g=$(grep -E "^#### " "/etc/xray/config.json" | cut -d ' ' -f 7 | sed -n "${CLIEN
 sed -i "/^#### $user $exp $hariini $uuid $tlvs/,/^},{/d" /etc/xray/config.json
 sed -i "/^#### $user $exp $hariini $uuid $tlvs $g/,/^},{/d" /etc/xray/config.json
 rm -f /home/vps/public_html/ss-ws-$user.txt
-rm -f /home/vps/public_html/ss-grpc-$user.txt
+rm -f /home/vps/public_html/config-ss-ws-$user.txt
+rm -f /home/vps/public_html/config-ss-grpc-$user.txt
 systemctl restart xray.service
 clear
 echo ""

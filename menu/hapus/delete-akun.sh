@@ -46,16 +46,16 @@ user=$(grep -E "^##### " "/etc/xray/configmultiakun.json" | cut -d ' ' -f 2 | se
 exp=$(grep -E "^##### " "/etc/xray/configmultiakun.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
 hariini=$(grep -E "^##### " "/etc/xray/configmultiakun.json" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p)
 uuid=$(grep -E "^##### " "/etc/xray/configmultiakun.json" | cut -d ' ' -f 5 | sed -n "${CLIENT_NUMBER}"p)
-tlvs=$(grep -E "^##### " "/etc/xray/configmultiakun.json" | cut -d ' ' -f 6 | sed -n "${CLIENT_NUMBER}"p)
-g=$(grep -E "^##### " "/etc/xray/configmultiakun.json" | cut -d ' ' -f 7 | sed -n "${CLIENT_NUMBER}"p)
-sed -i "/^# $user $exp $hariini $uuid $tlvs/,/^},{/d" /etc/xray/config.json
-sed -i "/^## $user $exp $hariini $uuid $tlvs/,/^},{/d" /etc/xray/config.json
-sed -i "/^### $user $exp $hariini $uuid $tlvs/,/^},{/d" /etc/xray/config.json
-sed -i "/^#### $user $exp $hariini $uuid $tlvs/,/^},{/d" /etc/xray/config.json
-sed -i "/^# $user $exp $hariini $uuid $tlvs $g/,/^},{/d" /etc/xray/config.json
-sed -i "/^## $user $exp $hariini $uuid $tlvs $g/,/^},{/d" /etc/xray/config.json
-sed -i "/^### $user $exp $hariini $uuid $tlvs $g/,/^},{/d" /etc/xray/config.json
-sed -i "/^#### $user $exp $hariini $uuid $tlvs $g/,/^},{/d" /etc/xray/config.json
+t="trojan"
+v="vmess"
+l="vless"
+s="shadowsock"
+g="grpc"
+sed -i "/^##### $user $exp $hariini $uuid /,/^},{/d" /etc/xray/configmultiakun.json
+sed -i "/^# $user $exp $hariini $uuid $t $g/,/^},{/d" /etc/xray/config.json
+sed -i "/^## $user $exp $hariini $uuid $l $g/,/^},{/d" /etc/xray/config.json
+sed -i "/^### $user $exp $hariini $uuid $v $g/,/^},{/d" /etc/xray/config.json
+sed -i "/^#### $user $exp $hariini $uuid $s $g/,/^},{/d" /etc/xray/config.json
 rm -f /etc/xray/vmess-$user-ws.json
 rm -f /etc/xray/vmess-$user-wstls.json
 rm -f /etc/xray/vmess-$user-grpc.json

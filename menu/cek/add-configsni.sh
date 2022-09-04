@@ -42,7 +42,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^##### " "/etc/xray/configmultiakun.json")
 
 	clear
 	echo ""
-	echo " Select the existing client you want to remove"
+	echo " Pilih Akun Untuk Membuat Config SNI"
 	echo " Press CTRL+C to return"
 	echo " ==============================="
 	echo -e	"  NO ${GREEN}USER   ${RED}EXPIRED ${BLUE}Net${NC}"

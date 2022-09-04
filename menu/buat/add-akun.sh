@@ -64,7 +64,7 @@ s="shadowsock"
 g="grpc"
 
 #buatdatamultiakun
-sed -i '/#multiakun$/a\#####'"$user $exp $hariini $uuid "'\
+sed -i '/#multiakun$/a\##### '"$user $exp $hariini $uuid "'\
 },{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/configmultiakun.json
 #buattrojan
 sed -i '/#trojanws$/a\# '"$user $exp $hariini $uuid $t"'\
